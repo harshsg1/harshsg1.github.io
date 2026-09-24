@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspberry Pi Omni-Wheel Robot | Harshdeep Shergill</title>
+    <meta name="description" content="An omni-directional Raspberry Pi robot with a robotic arm, computer vision, inverse kinematics, and machine learning block sorting, by Harshdeep Shergill.">
+    <meta property="og:title" content="Raspberry Pi Omni-Wheel Robot | Harshdeep Shergill">
+    <meta property="og:description" content="An omni-directional robot with a robotic arm and claw, computer vision, inverse kinematics, and ML-driven block sorting.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/rpi-robot.jpg">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='25,5 75,5 95,50 75,95 25,95 5,50' fill='none' stroke='%233b82f6' stroke-width='8'/%3E%3Ccircle cx='50' cy='50' r='14' fill='%233b82f6'/%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+
+    <div class="ambient-glow" aria-hidden="true">
+        <span class="g1"></span>
+        <span class="g2"></span>
+        <span class="g3"></span>
+    </div>
+
+    <div class="content-particles" aria-hidden="true">
+        <div class="tool ct1">
+            <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="6 6"/></svg>
+        </div>
+        <div class="tool alt ct2">
+            <svg viewBox="0 0 100 100"><rect x="25" y="25" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="3"/><line x1="15" y1="35" x2="25" y2="35" stroke="currentColor" stroke-width="3"/><line x1="15" y1="50" x2="25" y2="50" stroke="currentColor" stroke-width="3"/><line x1="15" y1="65" x2="25" y2="65" stroke="currentColor" stroke-width="3"/><line x1="75" y1="35" x2="85" y2="35" stroke="currentColor" stroke-width="3"/><line x1="75" y1="50" x2="85" y2="50" stroke="currentColor" stroke-width="3"/><line x1="75" y1="65" x2="85" y2="65" stroke="currentColor" stroke-width="3"/></svg>
+        </div>
+        <div class="tool ct3">
+            <svg viewBox="0 0 100 100"><polygon points="25,5 75,5 95,50 75,95 25,95 5,50" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="50" cy="50" r="16" fill="none" stroke="currentColor" stroke-width="4"/></svg>
+        </div>
+        <div class="tool alt ct4">
+            <svg viewBox="0 0 200 60" preserveAspectRatio="none"><path d="M0 30 H30 L45 10 L65 50 L85 10 L105 50 L125 10 L145 30 H200" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+        </div>
+    </div>
+
+    <header class="detail-topbar">
+        <a href="index.html#engineering-projects" class="back-link">&larr; Back to Portfolio</a>
+        <a href="index.html" span class="brand mono"> HS // ENGINEERING</span>
+    </header>
+
+    <section class="detail-hero">
+        <p class="hero-eyebrow mono">// autonomous_robotics_platform</p>
+        <h1>Raspberry Pi Omni-Wheel Robot</h1>
+        <div class="tech-tags">
+            <span class="tag">Raspberry Pi</span>
+            <span class="tag">Python</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Inverse Kinematics</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Ultrasonic Sensor</span>
+        </div>
+    </section>
+
+    <main class="detail-main">
+
+        <div class="detail-image">
+            <img src="assets/images/rpi-robot.jpg" alt="Raspberry Pi Omni-Directional Robot with Robotic Arm and Claw">
+        </div>
+
+        <div class="detail-section">
+            <h2>Platform Overview</h2>
+            <p>A Raspberry Pi sits at the core of a four-wheel omnidirectional drive platform, giving the robot full freedom of movement across a plane rather than the forward/turn constraints of a standard chassis. Mounted on top is a robotic arm with a claw end-effector for picking up and relocating objects, alongside an ultrasonic distance sensor for proximity sensing and an onboard camera for vision-based tasks.</p>
+        </div>
+
+        <div class="detail-section">
+            <h2>Multi-Colour Line Detection</h2>
+            <p>The camera feed is processed to detect and follow lines across multiple colours, letting the robot track a path in real time and adjust the omnidirectional drive to stay on course.</p>
+        </div>
+
+        <div class="detail-section">
+            <h2>Obstacle Avoidance</h2>
+            <p>The ultrasonic sensor continuously measures distance to nearby obstacles, feeding into the drive logic so the robot can detect obstructions and re-route around them autonomously.</p>
+        </div>
+
+        <div class="detail-section">
+            <h2>IK Pick-and-Place</h2>
+            <p>Building on the sensing stack, the camera identifies blocks and their shapes, and inverse kinematics translates that position into joint angles for the arm, letting the claw reach down, pick up the identified block, and move it to a new location.</p>
+        </div>
+
+        <div class="detail-section">
+            <h2>Machine Learning Sorting (Final Build)</h2>
+            <p>The final version of the project layered machine learning on top of the pick-and-place pipeline: an image classifier trained to distinguish dogs from cats determines which of two labelled images a block should be dropped on, with the arm using inverse kinematics to pick up the block and place it on the image matching the ML-determined result.</p>
+        </div>
+
+        <div class="detail-section">
+            <h2>Tools &amp; Technologies</h2>
+            <div class="tech-tags">
+                <span class="tag">Raspberry Pi</span>
+                <span class="tag">Python</span>
+                <span class="tag">OpenCV</span>
+                <span class="tag">Inverse Kinematics</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Ultrasonic Sensor</span>
+                <span class="tag">Omni-Directional Drive</span>
+                <span class="tag">Robotic Arm &amp; Claw</span>
+            </div>
+        </div>
+
+        <div class="detail-actions">
+            <a href="#" class="btn" target="_blank">View Robotics Repository →</a>
+            <a href="index.html#engineering-projects" class="btn secondary">Back to Projects</a>
+        </div>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom C / SDL2 Snake Engine | Harshdeep Shergill</title>
+    <meta name="description" content="A custom C and SDL2 Snake game engine built from scratch with dynamic linked-list memory management, by Harshdeep Shergill.">
+    <meta property="og:title" content="Custom C / SDL2 Snake Engine | Harshdeep Shergill">
+    <meta property="og:description" content="A standalone C and SDL2 game engine with custom doubly linked list memory management.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/snake-gameplay.gif">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='25,5 75,5 95,50 75,95 25,95 5,50' fill='none' stroke='%233b82f6' stroke-width='8'/%3E%3Ccircle cx='50' cy='50' r='14' fill='%233b82f6'/%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+
+    <div class="ambient-glow" aria-hidden="true">
+        <span class="g1"></span>
+        <span class="g2"></span>
+        <span class="g3"></span>
+    </div>
+
+    <div class="content-particles" aria-hidden="true">
+        <div class="tool ct1">
+            <svg viewBox="0 0 100 100"><polygon points="25,5 75,5 95,50 75,95 25,95 5,50" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="50" cy="50" r="16" fill="none" stroke="currentColor" stroke-width="4"/></svg>
+        </div>
+        <div class="tool alt ct2">
+            <svg viewBox="0 0 100 100"><rect x="25" y="25" width="50" height="50" rx="4" fill="none" stroke="currentColor" stroke-width="3"/><line x1="15" y1="35" x2="25" y2="35" stroke="currentColor" stroke-width="3"/><line x1="15" y1="50" x2="25" y2="50" stroke="currentColor" stroke-width="3"/><line x1="15" y1="65" x2="25" y2="65" stroke="currentColor" stroke-width="3"/><line x1="75" y1="35" x2="85" y2="35" stroke="currentColor" stroke-width="3"/><line x1="75" y1="50" x2="85" y2="50" stroke="currentColor" stroke-width="3"/><line x1="75" y1="65" x2="85" y2="65" stroke="currentColor" stroke-width="3"/></svg>
+        </div>
+        <div class="tool ct3">
+            <svg viewBox="0 0 200 40" preserveAspectRatio="none"><line x1="0" y1="20" x2="200" y2="20" stroke="currentColor" stroke-width="3"/><line x1="20" y1="8" x2="20" y2="32" stroke="currentColor" stroke-width="2"/><line x1="60" y1="8" x2="60" y2="32" stroke="currentColor" stroke-width="2"/><line x1="100" y1="8" x2="100" y2="32" stroke="currentColor" stroke-width="2"/><line x1="140" y1="8" x2="140" y2="32" stroke="currentColor" stroke-width="2"/><line x1="180" y1="8" x2="180" y2="32" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <div class="tool alt ct4">
+            <svg viewBox="0 0 100 100"><circle cx="22" cy="22" r="14" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="22" cy="22" r="5" fill="none" stroke="currentColor" stroke-width="3"/><line x1="32" y1="32" x2="72" y2="72" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path d="M64 80 L72 72 L80 80 L74 90 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>
+        </div>
+    </div>
+
+    <header class="detail-topbar">
+        <a href="index.html#engineering-projects" class="back-link">&larr; Back to Portfolio</a>
+        <a href="index.html" span class="brand mono"> HS // ENGINEERING</span>
+    </header>
+
+    <section class="detail-hero">
+        <p class="hero-eyebrow mono">// low_level_game_engine</p>
+        <h1>Custom C / SDL2 Snake Engine</h1>
+        <div class="tech-tags">
+            <span class="tag">C</span>
+            <span class="tag">SDL2</span>
+            <span class="tag">Linked Lists</span>
+        </div>
+    </section>
+
+    <main class="detail-main">
+
+        <div class="detail-image">
+            <img src="assets/images/snake-gameplay.gif" alt="C Library SDL2 Snake Gameplay Render">
+        </div>
+
+        <div class="detail-section">
+            <h2>Objective</h2>
+            <p>To construct an operational graphical game platform tracking active input states and coordinate arrays without relying on commercial game engines.</p>
+        </div>
+
+        <div class="detail-section">
+            <h2>Result</h2>
+            <p>A standalone engine structured in pure C utilizing raw SDL2 libraries. Enforced custom memory tracking methodologies by writing dynamic doubly linked lists to handle coordinate segments smoothly while maintaining strict runtime velocity limits.</p>
+        </div>
+
+        <div class="detail-section">
+            <h2>Tools &amp; Technologies</h2>
+            <div class="tech-tags">
+                <span class="tag">C</span>
+                <span class="tag">SDL2</span>
+                <span class="tag">Doubly Linked Lists</span>
+                <span class="tag">Manual Memory Management</span>
+            </div>
+        </div>
+
+        <div class="detail-actions">
+            <a href="#" class="btn" target="_blank">View Firmware Repository →</a>
+            <a href="index.html#engineering-projects" class="btn secondary">Back to Projects</a>
+        </div>
+
+    </main>
+
+</body>
+</html>
